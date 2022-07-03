@@ -45,17 +45,35 @@ public class Categorias extends HttpServlet {
         dispatcher.forward(request, response);
     }
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String parametro = request.getParameter("opcion");
-        if(parametro.equals("crear")){
-            String pagina = "/Vistas-Categorias/crearCategoria.jsp";
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
-        dispatcher.forward(request, response);
-        }else{
-         this.listaCategorias(request, response);   
-        }
         
+        String parametro = request.getParameter("opcion");
+        
+        String estado = request.getParameter("opcion");
+         String id_cat = request.getParameter("id");
+         String nombre_cat = request.getParameter("nombre");
+         String estado_cat = request.getParameter("estado");
+         
+        if(estado.equals("listar")){
+            this.listaCategorias(request, response);
+        }else if(parametro.equals("crear")){ //Evaluar si el parametro es crear o listar o cualquier otro
+            System.out.println("Crear Categoria");
+            String pagina = "/Vistas-Categorias/crearCategoria.jsp"; //Vista o formula para registrar nueva categoria
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
+            dispatcher.forward(request, response);
+        }else if(estado.equals("editar")){
+             System.out.println("Editando categorias....");
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/editarCategorias.jsp?id="+id_cat+"&&nombre="+nombre_cat+"&&estado="+estado_cat);
+             dispatcher.forward(request, response);
+             
+         }else if(estado.equals("eliminar")){
+             System.out.println("Baja de categorias...");
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/bajaCategorias.jsp?id="+id_cat+"&&nombre="+nombre_cat);
+             dispatcher.forward(request, response);
+         }else {
+           
+        }
     }
 
     @Override

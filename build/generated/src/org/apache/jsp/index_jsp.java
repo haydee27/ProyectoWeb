@@ -11,6 +11,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(3);
+    _jspx_dependants.add("/WEB-INF/Vistas-Parciales/css-js.jspf");
+    _jspx_dependants.add("/WEB-INF/Vistas-Parciales/encabezado.jspf");
+    _jspx_dependants.add("/WEB-INF/Vistas-Parciales/pie.jspf");
+  }
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
@@ -43,20 +50,61 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\n");
       out.write("\n");
-      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
+      out.write("        <title>Control de inventario</title>\n");
+      out.write("        ");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!-- Estilo personalizado -->\r\n");
+      out.write("<link href=\"bootstrap337/css/estilo-base.css\" type=\"text/css\" rel=\"stylesheet\">\r\n");
+      out.write("\r\n");
+      out.write("<!-- Estilo personalizado -->\r\n");
+      out.write("<link href=\"bootstrap337/css/bootstrap-theme.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("<link href=\"bootstrap337/css/bootstrap-theme.min.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("<link href=\"bootstrap337/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("<link href=\"bootstrap337/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("\r\n");
+      out.write("<!-- Script js de boostrap -->\r\n");
+      out.write("<script src=\"bootstrap337/js/bootstrap.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"bootstrap337/js/bootstrap.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("<!-- Script libreria jquery -->");
+      out.write("\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>Hello World!</h1>\n");
       out.write("        ");
- out.print("hola mundo cruel"); 
-      out.write(" \n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<div>\r\n");
+      out.write("    <div class=\"encabezado\">\r\n");
+      out.write("        SISTEMA DE CONTROL DE INVENTARIO\r\n");
+      out.write("        <a href=\"index\" class=\"btn btn-primary btn-sm\" role=\"button\">INICIO</a>\r\n");
+      out.write("        <a href=\"categorias.do?opcion=listar\" class=\"btn btn-primary btn-sm\" role=\"button\">CATEGORIAS</a>\r\n");
+      out.write("        <a href=\"#\" class=\"btn btn-primary btn-sm\" role=\"button\">PRODUCTO</a>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    <div class=\"contenido\"> \r\n");
+      out.write("        <!-- Este DIV no se cierra aqui, se cierra en pie.jspf -->\r\n");
+      out.write("\n");
+      out.write("        <h1>Bienvenid@s!</h1>\n");
+      out.write("        \n");
+      out.write("        ");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("         <!-- Aqui se deben cerrar las DIV abiertos en encabezado.jspf -->\r\n");
+      out.write("         </div>\r\n");
+      out.write("         <div class=\"pie\">\r\n");
+      out.write("                   &COPY; Haydee B - Astrid G - Jorge G \"ITCA-FEPADE\"\r\n");
+      out.write("         </div>\r\n");
+      out.write("</div>\r\n");
+      out.write("\r\n");
+      out.write("\n");
       out.write("    </body>\n");
       out.write("</html>\n");
+      out.write("\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
