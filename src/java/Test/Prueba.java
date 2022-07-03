@@ -11,8 +11,8 @@ public class Prueba {
         Prueba evaluar = new Prueba();
         evaluar.guardarCategoria();//Metodo guardar
         evaluar.listarCategoria(); //Metodo listar antes del metodo eliminar
-        //evaluar.eliminarCategoria(); //Metodo que eliminara la categoria
-       //evaluar.listarCategoria(); //Cosulta si ha sido eliminada la categoria
+        evaluar.eliminarCategoria(); //Metodo que eliminara la categoria
+        evaluar.listarCategoria(); //Cosulta si ha sido eliminada la categoria
         evaluar.editarCategoria(); //Metodo editar
     }
 
@@ -39,15 +39,15 @@ public class Prueba {
     public void guardarCategoria() {
        CategoriaDAO categoria = new CategoriaDAOImplementar();
        Categoria guardar_cat = new Categoria();
-       guardar_cat.setNom_categoria("Bebidas Naturales "); //Cambiar nombre
+       guardar_cat.setNom_categoria("Bebidas "); //Cambiar nombre
        //guardar_cat.setId_categoria(20); //Modifica la categoria registrada anteriormente
        guardar_cat.setEstado_categoria(2); //Estado 1
        categoria.guardarCat(guardar_cat);
     }
 
-    /*public void eliminarCategoria() {
+    public void eliminarCategoria() {
        CategoriaDAO categoria = new CategoriaDAOImplementar();
-       categoria.borrarCat(2); //se eliminara la categoria con id_categoria = 2
-    }*/
+       categoria.borrarCat(10); //se eliminara la categoria con id_categoria = 2
+    }
     
 }

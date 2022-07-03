@@ -11,8 +11,8 @@ public class PruebaP {
         PruebaP evaluar = new PruebaP();
        evaluar.listarProductos();
        evaluar.editarProducto();
-       //evaluar.guardaProducto();
-       //evaluar.eliminarProducto();
+       evaluar.guardaProducto();
+       evaluar.eliminarProducto();
         evaluar.listarProductos();
     }
 
@@ -48,19 +48,19 @@ public class PruebaP {
     public void guardaProducto(){
         ProductoDAO producto = new ProductoDAOImplementar();
         Producto guarda_pro = new Producto();
-        guarda_pro.setNom_producto("FotoCards");
+        guarda_pro.setNom_producto("Licuados");
         guarda_pro.setStock(0);
         guarda_pro.setPrecio(2);
-        guarda_pro.setUnidadMedida("pieza");
+        guarda_pro.setUnidadMedida("porcion");
         guarda_pro.setEstado(1);
         guarda_pro.setCategoria(1);
         producto.guardarPro(guarda_pro);
         
     }
     
-   /* public void eliminarProducto(){
+   public void eliminarProducto(){
         ProductoDAO producto = new ProductoDAOImplementar();
-        producto.borrarPro(3);
-    }*/
+        producto.borrarPro(2);
+    }
 }
 
