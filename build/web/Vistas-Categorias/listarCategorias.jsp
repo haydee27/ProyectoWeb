@@ -29,7 +29,7 @@
                         <td><%= categoria.getEstado_categoria()%> </td>
                         <td>
                             <a href="categorias.do?opcion=editar&&id=<%= categoria.getId_categoria() %>&&nombre=<%= categoria.getNom_categoria() %>&&estado=<%= categoria.getEstado_categoria() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit" role="button">EDITAR</a>
-                            <a href="#" class="btn btn-danger btn-sm glyphicon glyphicon-remove" role="button">ELIMINAR</a>
+                            <a href="categorias.do?opcion=eliminar&&id=<%= categoria.getId_categoria() %>&&nombre=<%= categoria.getNom_categoria() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove" role="button">ELIMINAR</a>
                         </td>
                     </tr>
                     <%
