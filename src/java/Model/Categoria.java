@@ -1,3 +1,4 @@
+
 package Model;
 
 public class Categoria {
@@ -6,9 +7,10 @@ public class Categoria {
     private int estado_categoria;
 
     public Categoria() {
-        this.id_categoria = 0;
+         this.id_categoria = 0;
         this.nom_categoria = "";
-        this.estado_categoria = 1;
+        this.estado_categoria = 1; //seera activo y 0 sera inactivo
+   
     }
 
     public Categoria(int id_categoria, String nom_categoria, int estado_categoria) {

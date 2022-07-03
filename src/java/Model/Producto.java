@@ -2,26 +2,27 @@
 package Model;
 
 public class Producto {
-    private int id_producto;
-    private String nom_producto;
-    private float stock;
-    private float precio;
-    private String unidad_de_medida;
-    private int estado;
-    private int id_categoria;
+   private int id_producto;
+   private String nom_producto;
+   private float stock;
+   private float precio;
+   private String unidadMedida;
+   private int estado;
+   private int categoria; // Objeto categoria
 
     public Producto() {
         this.id_producto = 0;
+         //Inicializae el modelo categoria
     }
 
-    public Producto(int id_producto, String nom_producto, float stock, float precio, String unidad_de_medida, int estado, int id_categoria) {
+    public Producto(int id_producto, String nom_producto, float stock, float precio, String unidadMedida, int estado, int categoria) {
         this.id_producto = id_producto;
         this.nom_producto = nom_producto;
         this.stock = stock;
         this.precio = precio;
-        this.unidad_de_medida = unidad_de_medida;
+        this.unidadMedida = unidadMedida;
         this.estado = estado;
-        this.id_categoria = id_categoria;
+        this.categoria = categoria;
     }
 
     public int getId_producto() {
@@ -40,6 +41,7 @@ public class Producto {
         this.nom_producto = nom_producto;
     }
 
+
     public float getStock() {
         return stock;
     }
@@ -56,12 +58,12 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String getUnidad_de_medida() {
-        return unidad_de_medida;
+    public String getUnidadMedida() {
+        return unidadMedida;
     }
 
-    public void setUnidad_de_medida(String unidad_de_medida) {
-        this.unidad_de_medida = unidad_de_medida;
+    public void setUnidadMedida(String unidadMedida) {
+        this.unidadMedida = unidadMedida;
     }
 
     public int getEstado() {
@@ -72,13 +74,13 @@ public class Producto {
         this.estado = estado;
     }
 
-    public int getId_categoria() {
-        return id_categoria;
+    public int getCategoria() {
+        return categoria;
     }
 
-    public void setId_categoria(int id_categoria) {
-        this.id_categoria = id_categoria;
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
     }
-    
-    
+   
+   
 }

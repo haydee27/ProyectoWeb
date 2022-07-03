@@ -1,16 +1,22 @@
+
 package Factory;
 
+import Factory.ConexionBD;
+
 public class FactoryConexionDB {
-    
-    public static final int mysql = 1;
-    public static String[] configMysql = {"bd_inventario", " root", ""};
-    
+    //podeos definir la configuracion para diferentes BD
+    public static final int MySQL = 1; //Para conectar a MySQL
+    public static String[] configMySQL = { "bd_inventario", "root", ""};
+   
     public static ConexionBD open (int tipoBD){
         switch(tipoBD){
-            case FactoryConexionDB.mysql:
-                return new MySQLConexionFactory(configMysql);
+            case FactoryConexionDB.MySQL:
+            return new MySQLConexionFactory(configMySQL);
             default:
-                return null;
+                    return null;
         }
+    }
+     public static void main(String[] args) {
+        open (1);
     }
 }
