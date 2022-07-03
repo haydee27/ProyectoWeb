@@ -12,7 +12,7 @@
     </head>
     <body>
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"  %>
-        <a href="#" class="btn btn-success btn-sm glyphicon glyphicon-pencil" role="button">NUEVA CATEGORIA</a>
+        <a href="<%= request.getContextPath ()%>/categorias.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicon-pencil" role="button">NUEVA CATEGORIA</a>
         <h1>LISTADO DE CATEGORIAS REGISTRADAS</h1>
         <table class="table table-striped">
             <tr>

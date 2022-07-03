@@ -4,7 +4,7 @@
     <div class="encabezado">
         SISTEMA DE CONTROL DE INVENTARIO
         <a href="index" class="btn btn-primary btn-sm" role="button">INICIO</a>
-        <a href="categorias.do" class="btn btn-primary btn-sm" role="button">CATEGORIAS</a>
+        <a href="categorias.do?opcion=listar" class="btn btn-primary btn-sm" role="button">CATEGORIAS</a>
         <a href="#" class="btn btn-primary btn-sm" role="button">PRODUCTO</a>
     </div>
     <div class="contenido"> 

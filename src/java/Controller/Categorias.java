@@ -3,6 +3,7 @@ package Controller;
 
 import DAO.CategoriaDAO;
 import DAO.CategoriaDAOImplementar;
+import Model.Categoria;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -46,13 +47,29 @@ public class Categorias extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        this.listaCategorias(request, response);
+        String parametro = request.getParameter("opcion");
+        if(parametro.equals("crear")){
+            String pagina = "/Vistas-Categorias/crearCategoria.jsp";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
+        dispatcher.forward(request, response);
+        }else{
+         this.listaCategorias(request, response);   
+        }
+        
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       Categoria categoria = new Categoria();
+       
+       categoria.setId_categoria(Integer.parseInt(request.getParameter("id_categoria")));
+       categoria.setNom_categoria(request.getParameter("txtNomCategoria"));
+       categoria.setEstado_categoria(Integer.parseInt(request.getParameter("txtEstadoCategoria")));
+       
+       CategoriaDAO guardaCategoria = new CategoriaDAOImplementar();
+       guardaCategoria.guardarCat(categoria);
+       this.listaCategorias(request, response);
     }
 
  
