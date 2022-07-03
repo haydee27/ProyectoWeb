@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : 07-02-2022, 07:51:42 PM
-    Author     : MINEDUCYT
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

@@ -13,7 +13,7 @@ public class PruebaP {
        evaluar.editarProducto();
        evaluar.guardaProducto();
        evaluar.eliminarProducto();
-        evaluar.listarProductos();
+       evaluar.listarProductos();
     }
 
    public void listarProductos() {
