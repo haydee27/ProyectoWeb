@@ -39,7 +39,7 @@ public class Productos extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String parametro = request.getParameter("opcion");
-        String estado = request.getParameter("opcions");
+        String estado = request.getParameter("opcion");
         String id_pro = request.getParameter("id");
         String nom_producto = request.getParameter("nombre");
         String stock = request.getParameter("stock");

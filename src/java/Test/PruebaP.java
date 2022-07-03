@@ -10,10 +10,10 @@ public class PruebaP {
     public static void main(String[] args) {
         PruebaP evaluar = new PruebaP();
        evaluar.listarProductos();
-       evaluar.editarProducto();
-       evaluar.guardaProducto();
-       evaluar.eliminarProducto();
-       evaluar.listarProductos();
+       //evaluar.editarProducto();
+       //evaluar.guardaProducto();
+       //evaluar.eliminarProducto();
+      // evaluar.listarProductos();
     }
 
    public void listarProductos() {

@@ -86,20 +86,19 @@ public class ProductoDAOImplementar implements ProductoDAO{
                 StringBuilder miSQL = new StringBuilder();
                 //Id es de increment
                 miSQL.append("INSERT INTO tb_producto(nom_producto, stock, precio, unidad_de_medida, estado_producto, categoria) VALUES (' ");
-                miSQL.append(producto.getNom_producto() + " ', ' ").append(producto.getStock() + " ', ' ").append(producto.getPrecio() 
-                        + " ', ' ").append(producto.getUnidadMedida() + " ', ' ").append(producto.getEstado() + " ' , ").append(producto.getCategoria());
-                miSQL.append(" ) ; ");
+                miSQL.append(producto.getNom_producto() + "', '").append(producto.getStock() + "', '").append(producto.getPrecio() + "', '").append(producto.getUnidadMedida() + "', '").append(producto.getEstado() + "' , '").append(producto.getCategoria()).append("\'");
+                miSQL.append(");");
                 //metodo para consultar la consulta 
                 this.conn.ejecutarSQL(miSQL.toString());
             }else if(producto.getId_producto() > 0){
                 StringBuilder miSQL = new StringBuilder();
                 miSQL.append("UPDATE tb_producto SET id_producto = ").append(producto.getId_producto());
-                miSQL.append(", nom_producto = ' ").append(producto.getNom_producto());
-                miSQL.append(", stock =  ").append(producto.getStock());
-                miSQL.append(", precio =  ").append(producto.getPrecio());
-                miSQL.append(", unidad_de_medida =  ").append(producto.getUnidadMedida());
-                miSQL.append(" ', estado_producto =  ").append(producto.getEstado());
-                miSQL.append(" WHERE id_producto =  ").append(producto.getId_producto()).append(";");
+                miSQL.append(",nom_producto = '").append(producto.getNom_producto());
+                miSQL.append("',stock = '").append(producto.getStock());
+                miSQL.append("',precio = '").append(producto.getPrecio());
+                miSQL.append("',unidad_de_medida = '").append(producto.getUnidadMedida());
+                miSQL.append("',estado_producto = '").append(producto.getEstado());
+                miSQL.append(" WHERE id_producto = ").append(producto.getId_producto()).append(";");
                 
                 this.conn.ejecutarSQL(miSQL.toString());
             }
