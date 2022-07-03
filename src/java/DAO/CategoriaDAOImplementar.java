@@ -20,7 +20,7 @@ public class CategoriaDAOImplementar implements CategoriaDAO {
     
     
     @Override
-    public List<Categoria> listar() {
+    public List<Categoria> Listar() {
         StringBuilder miSQL = new StringBuilder();
         miSQL.append("SELECT * FROM tb_categoria;");
         List<Categoria> lista = new ArrayList<Categoria>();
@@ -43,7 +43,7 @@ public class CategoriaDAOImplementar implements CategoriaDAO {
     }
 
     @Override
-    public List<Categoria> listar2() {
+    public List<Categoria> Listar2() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
