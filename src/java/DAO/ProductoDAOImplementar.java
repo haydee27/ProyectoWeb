@@ -116,13 +116,15 @@ public class ProductoDAOImplementar implements ProductoDAO{
        boolean borra = false; // Bandera de resultado
        try{
         StringBuilder miSQL = new StringBuilder();
-        miSQL.append("DELETE FROM tb_producto WHERE id_producto = ").append(id_pro_borrar);
+        miSQL.append("Delete from tb_producto WHERE id_producto = ").append(id_pro_borrar);
        this.conn.ejecutarSQL(miSQL.toString());
        borra = true;
     }catch (Exception e){
+        
     }finally{
            this.conn.cerrarConexion();
        }
     return borra;
     }
+    
     }

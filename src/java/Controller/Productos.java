@@ -40,7 +40,7 @@ public class Productos extends HttpServlet {
             throws ServletException, IOException {
         String parametro = request.getParameter("opcion");
         String estado = request.getParameter("opcion");
-        String id_pro = request.getParameter("id");
+        String id_producto = request.getParameter("id");
         String nom_producto = request.getParameter("nombre");
         String stock = request.getParameter("stock");
         String precio = request.getParameter("precio");
@@ -63,7 +63,7 @@ public class Productos extends HttpServlet {
             
         }else if(estado.equals("eliminar")){
             System.out.println("Baja de productos");
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Productos/bajaProductos.jsp");
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Productos/bajaProducto.jsp?id="+ id_producto+"&&nombre="+ nom_producto+"&&stock=" + stock +"&&precio="+precio + "&&unidad="+unidad+"&&estado=" +estado_pro+"&&Categoria="+Categoria);
         dispatcher.forward(request, response); 
         }
         
