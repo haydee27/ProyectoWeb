@@ -58,7 +58,7 @@ public class Productos extends HttpServlet {
         
         }else if(estado.equals("editar")){
             System.out.println("Editando productos");
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Productos/editarProductos.jsp");
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Productos/editarProductos.jsp?id="+ id_producto+"&&nombre="+ nom_producto+"&&stock="+ stock+"&&precio="+precio + "&&unidad="+unidad+"&&estado=" + estado_pro+"&&Categoria="+Categoria);
         dispatcher.forward(request, response); 
             
         }else if(estado.equals("eliminar")){
