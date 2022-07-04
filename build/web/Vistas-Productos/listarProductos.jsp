@@ -37,7 +37,8 @@
                     <td>
                     
                     <td>
-                <a href="#" class="btn btn-info btn-sm glyphicon glyphicon-edit" role="button">Editar</a>
+                        <%--Cambiar url de editar --%>
+                <a href="productos.do?opcion=editar&&id" class="btn btn-info btn-sm glyphicon glyphicon-edit" role="button">Editar</a>
                 <a href="productos.do?opcion=eliminar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() %>&&stock=<%= producto.getStock() %>&&precio=<%= producto.getPrecio() %>&&unidad_de_medida=<%= producto.getUnidadMedida() %>&&estado_producto=<%= producto.getEstado() %>&&categoria=<%= producto.getCategoria() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove" role="button">ELIMINAR</a>
                 
                     </td>
