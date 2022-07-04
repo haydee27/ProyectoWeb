@@ -20,7 +20,7 @@
       <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
       <div class="col-auto bg-gray p-5 text-center"> 
       <h1 class= 'text-center'>Datos de Producto</h1>
-        <form action="actualizarProductos" method="post">
+        <form action="actualizarProductos.do" method="post">
             
             <div class="mb-3 row"> 
                 <label for="staticEmail" class="col-sm-2 col-form-label">ID Producto:</label>
@@ -73,7 +73,7 @@
             <div class="mb-3 row">
           
               <button type="submit" name="send" class="btn btn-success">Actualizar Producto</button>
-               <a href="Producto?opcion=listar" class="btn btn-secondary btn-lg" role="button">Regresa</a>
+               <a href="productos.do?opcion=listar" class="btn btn-secondary btn-lg" role="button">Regresa</a>
         </div>
         </form>
   
@@ -84,7 +84,8 @@
                 //out.print("Registro Actualizado Correctamente");
                 //System.out.println("End");
            %>
-                   <div class="alert alert-success" role="alert">
+                  
+           <div class="alert alert-success" role="alert">
                    Registro Actualizado Correctamente!!
                  </div>
            <%   
