@@ -3,7 +3,6 @@ package DAO;
 
 import Factory.ConexionBD;
 import Factory.FactoryConexionDB;
-import Model.Categoria;
 import Model.Usuario;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,7 +17,7 @@ public class UsuarioDAOImplementar implements UsuarioDAO {
 
     public UsuarioDAOImplementar() {
         //Definir a la base de datos que se conectara por defecto.
-        this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
+        //this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
     }
 
     @Override

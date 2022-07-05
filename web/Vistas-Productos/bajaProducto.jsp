@@ -12,7 +12,7 @@
         <title>Baja Categorias</title>
         <%@include file="../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body>
+    <body background="img/morado.jpg">
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"  %>
         <div class="col-auto bg-grayp-5 txt-center">
         <h1>¿DESEA ELIMINAR EL SIGUIENTE PRODUCTO?</h1>

@@ -9,7 +9,7 @@
         <title>CONTROL DE INVENTARIO</title>
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body>
+    <body background="img/morado.jpg">
          <%@include  file="../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
                 <!-- <div style="width: 600px"> -->
                 <div class="col-auto bg-gray p-5 text-center">

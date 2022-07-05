@@ -16,7 +16,7 @@
         <title>MODIFICAR CATEGORIAS</title>
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body class="m-0 row justify-content-center">
+    <body class="m-0 row justify-content-center" background="img/morado.jpg">
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
          <div class="col-auto bg-gray p-5 text-center">
         <h1 class='text-center'>Datos de Categoria</h1>

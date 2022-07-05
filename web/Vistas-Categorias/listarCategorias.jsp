@@ -10,7 +10,7 @@
         <title>Control de inventario</title>
         <%@include file="../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body>
+    <body background="img/morado.jpg">
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"  %>
         <a href="<%= request.getContextPath ()%>/categorias.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicon-pencil" role="button">NUEVA CATEGORIA</a>
         <h1>LISTADO DE CATEGORIAS REGISTRADAS</h1>

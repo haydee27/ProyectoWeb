@@ -13,7 +13,7 @@
             }
             </script>
     </head>
-    <body>
+    <body background="img/morado.jpg">
         
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"  %>
         

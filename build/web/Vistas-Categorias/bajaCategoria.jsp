@@ -12,7 +12,7 @@
         <title>BAJA CATEGORIAS</title>
        <%@include file="../WEB-INF/Vistas-Parciales/css-js.jspf"  %>
     </head>
-    <body>
+    <body background="img/morado.jpg">
        <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"  %>
             <div class="col-auto bg-grayp-5 txt-center">
         <h1> Baja de categorias </h1>
