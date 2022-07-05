@@ -12,6 +12,7 @@
     </head>
     <body background="img/morado.jpg">
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"  %>
+        <div class="container" >
         <a href="<%= request.getContextPath ()%>/categorias.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicon-pencil" role="button">NUEVA CATEGORIA</a>
         <h1>LISTADO DE CATEGORIAS REGISTRADAS</h1>
         <table class="table table-striped">
@@ -36,6 +37,7 @@
                 }
             %>
         </table>
+        </div>
         
         <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf"  %>
     </body>

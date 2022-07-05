@@ -30,7 +30,7 @@
             <center><td>Bantang S.A de C.V</td></center>
             <center><td>San Salvador, carretera al Litoral </td></center>
             <center><td>2775-0000</td></center>
-            <center><td>Band Pd</td></center>
+            <center><td>Bang PD</td></center>
             <center><td>bantang2013@gmail.com </td></center>
             </tr>
         </table>
