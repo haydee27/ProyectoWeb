@@ -5,8 +5,8 @@
     String nom_Pro = request.getParameter("nombre");
     String stock = request.getParameter("stock");
     String precio = request.getParameter("precio");
-    String unidad_de_medida = request.getParameter("unidadMedida");
-    String estado_Pro = request.getParameter("estado");
+    String unidad_de_medida = request.getParameter("unidad_de_medida");
+    String estado_Pro = request.getParameter("estado_producto");
     String categoria = request.getParameter("categoria");
     
     %>
@@ -25,7 +25,7 @@
             <div class="mb-3 row"> 
                 <label for="staticEmail" class="col-sm-2 col-form-label">ID Producto:</label>
             <div class="col-sm-10">
-                <input type="text" value='<%= id_Pro%>' name="id1" id="id1" readonly class="form-control-plaintext" id="staticEmail" placeholder="ID Producto">
+                <input type="text" value='<%= id_Pro%>' name="id" id="id" readonly class="form-control-plaintext" id="staticEmail" placeholder="Id_Pro">
                 <input type="hidden" value='<%= id_Pro %>' name="id" id="id" readonly class="form-control-plaintext"  
         </div>
     </div>
@@ -33,40 +33,40 @@
             <div class="mb-3 row">
                  <label for="inputPassword" class="col-sm-2 col-form-label">Nombre Producto:</label> 
                   <div class="col-sm-10">
-                     <input type="text" value='<%= nom_Pro %>' name="nombre" id="nombre" class="form-control" placeholder="Nombre Producto" required="true">
+                     <input type="text" value='<%= nom_Pro %>' name="nombre" id="nombre" class="form-control" placeholder="nombre" >
         </div>
     </div>
         
             <div class="mb-3 row">
                  <label for="inputPassword" class="col-sm-2 col-form-label"> Stock: </label>
                  <div class="col-sm-10">
-                    <input type="text" value='<%= stock %>' name="stock" id="stock" clas="form-control" placeholder="stock" required="true">
+                    <input type="text" value='<%= stock %>' name="stock" id="stock" class="form-control" placeholder="stock" >
         </div>
     </div> 
         
             <div class="mb-3 row">
                  <label for="inputPassword" class="col-sm-2 col-form-label"> Precio: </label>
                  <div class="col-sm-10">
-                    <input type="text" value='<%= precio %>' name="precio" id="precio" clas="form-control" placeholder="precio" required="true">
+                    <input type="text" value='<%= precio %>' name="precio" id="precio" class="form-control" placeholder="precio" >
         </div>
    </div>
         
             <div class="mb-3 row">
-                 <label for="inputPassword" class="col-sm-2 col-form-label"> Unidad_de_medida </label>
+                 <label for="inputPassword" class="col-sm-2 col-form-label"> Unidad de medida </label>
                  <div class="col-sm-10">
-                     <input type="text" value='<%= unidad_de_medida %>' name="unidad_de_medida" id="precio" clas="form-control" placeholder="unidad_de_medida" required="true">
+                     <input type="text" value='<%= unidad_de_medida %>' name="unidad_de_medida" id="unidad_de_medida" class="form-control" placeholder="unidad" >
         </div>
     </div>
            <div class="mb-3 row">
                  <label for="inputPassword" class="col-sm-2 col-form-label">Estado Producto</label>
                  <div class="col-sm-10">
-                     <input type="text" value='<%= estado_Pro %>' name="estado" id="estado" class="form-control" placeholder="Estado Producto" required="true">
+                     <input type="text" value='<%= estado_Pro %>' name="estado_producto" id="estado_producto" class="form-control" placeholder="estado" >
         </div>
     </div>
             <div class="mb-3 row">
                    <label for="inputPassword" class="col-sm-2 col-form-label">Categoria</label>
                      <div class="col-sm-10">
-                    <input type="text" value='<%= categoria %>' name="categoria" id="categoria" class="form-control" placeholder="Categoria" required="true">
+                    <input type="text" value='<%= categoria %>' name="categoria" id="categoria" class="form-control" placeholder="categoria" >
         </div>
     </div>
         
@@ -78,14 +78,13 @@
         </form>
   
         
-             <%
+           <%
             String dato = request.getParameter("aviso");
             if(dato!=null){
                 //out.print("Registro Actualizado Correctamente");
                 //System.out.println("End");
            %>
-                  
-           <div class="alert alert-success" role="alert">
+                   <div class="alert alert-success" role="alert">
                    Registro Actualizado Correctamente!!
                  </div>
            <%   

@@ -57,7 +57,7 @@ public class ProductoDAOImplementar implements ProductoDAO{
            Producto producto = new Producto();
            StringBuilder miSQL = new StringBuilder();
          
-          miSQL.append("SELECT * FROM tb_producto WHERE id_producto = ").append(id_pro_edit);
+          miSQL.append("SELECT * FROM tb_producto WHERE id_producto =").append(id_pro_edit);
            try{
                ResultSet resultadoSQL = this.conn.consultaSQL(miSQL.toString());
                while(resultadoSQL.next()){
@@ -70,11 +70,10 @@ public class ProductoDAOImplementar implements ProductoDAO{
                    producto.setCategoria(resultadoSQL.getInt("categoria"));
                }
            }catch (Exception e){
-                   
-                   }finally{
-                           this.conn.cerrarConexion();
-                           }
-                   return producto;
+           }finally{
+                this.conn.cerrarConexion();
+           }
+            return producto;
            }
 
     @Override

@@ -49,8 +49,8 @@ public class actualizarProductos extends HttpServlet {
         String nom_producto  = request.getParameter("nombre");
         String stock = request.getParameter("stock");
         String precio = request.getParameter("precio");
-        String unidad = request.getParameter("unidad");
-        String estado_pro = request.getParameter("estado");
+        String unidad = request.getParameter("unidad_de_medida");
+        String estado_pro = request.getParameter("estado_producto");
         String categoria = request.getParameter("categoria");
         
         ProductoDAO producto = new ProductoDAOImplementar();
