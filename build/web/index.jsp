@@ -35,6 +35,8 @@
             </tr>
         </table>
         <hr>
+        <center> <a  href="categorias.do?opcion=listars" class="btn btn-sm " role="button" >REGISTROS</a></center>
+        <hr>
         </div>
       
         <hr><%@include file="WEB-INF/Vistas-Parciales/pie.jspf"  %>

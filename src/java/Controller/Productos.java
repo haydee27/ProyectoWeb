@@ -48,7 +48,9 @@ public class Productos extends HttpServlet {
         String estado_pro = request.getParameter("estado");
         String Categoria = request.getParameter("categoria");
         
-        if(parametro.equals("listar")){
+        if(estado.equals("listarss")){
+            this.listaProductos1(request, response);
+        }else if(parametro.equals("listar")){
             this.listaProductos(request, response);
         }else if(estado.equals("crear")){
             System.out.println("Crear Productos");
@@ -95,6 +97,17 @@ public class Productos extends HttpServlet {
         HttpSession session = request.getSession(true);
         session.setAttribute("lista", producto.Listar());
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Productos/listarProductos.jsp");
+        dispatcher.forward(request, response);
+        
+    }
+   
+    protected void listaProductos1(HttpServletRequest request, HttpServletResponse response)
+           throws ServletException, IOException {
+        response.setContentType("text/html;charset-UTF-8");
+        ProductoDAO producto = new ProductoDAOImplementar();
+        HttpSession session = request.getSession(true);
+        session.setAttribute("listarss", producto.Listar2());
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/listadoPro_Cat.jsp");
         dispatcher.forward(request, response);
         
     }

@@ -44,6 +44,16 @@ public class Categorias extends HttpServlet {
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/listarCategorias.jsp");
         dispatcher.forward(request, response);
     }
+     protected void listaCategorias1(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        CategoriaDAO categoria = new CategoriaDAOImplementar();
+        
+        HttpSession sesion = request.getSession(true);
+        sesion.setAttribute("listars", categoria.Listar2());
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/listadoPro_Cat.jsp");
+        dispatcher.forward(request, response);
+    }
     @Override
      protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -54,8 +64,10 @@ public class Categorias extends HttpServlet {
          String id_cat = request.getParameter("id");
          String nombre_cat = request.getParameter("nombre");
          String estado_cat = request.getParameter("estado");
-         
-        if(estado.equals("listar")){
+        
+         if(parametro.equals("listars")){
+             this.listaCategorias1(request, response);
+         }else if(estado.equals("listar")){
             this.listaCategorias(request, response);
         }else if(parametro.equals("crear")){ //Evaluar si el parametro es crear o listar o cualquier otro
             System.out.println("Crear Categoria");

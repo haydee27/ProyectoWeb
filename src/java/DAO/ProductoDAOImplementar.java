@@ -48,7 +48,32 @@ public class ProductoDAOImplementar implements ProductoDAO{
 
     @Override
     public List<Producto> Listar2() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
+    StringBuilder miSQL = new StringBuilder();
+    miSQL.append("SELECT * FROM tb_producto;");
+    List<Producto> listarss = new ArrayList<Producto>();
+    try{
+        ResultSet resultadoSQL = this.conn.consultaSQL(miSQL.toString());
+        while(resultadoSQL.next()){
+            Producto producto = new Producto();
+            
+            producto.setId_producto(resultadoSQL.getInt("id_producto"));
+            producto.setNom_producto(resultadoSQL.getString("nom_producto"));
+            //producto.setCategoria_id(resultadoSQL.getInt("categoria_id"));
+            producto.setStock(resultadoSQL.getFloat("stock"));
+            producto.setPrecio(resultadoSQL.getFloat("precio"));
+            producto.setUnidadMedida(resultadoSQL.getNString("unidad_de_medida"));
+            producto.setEstado(resultadoSQL.getInt("estado_producto"));
+            producto.setCategoria(resultadoSQL.getInt("categoria"));
+            
+            listarss.add(producto);
+        }
+    }catch(Exception ex){
+        
+    }finally{
+        this.conn.cerrarConexion();
+    }
+      return listarss;   
     }
 
     @Override

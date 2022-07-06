@@ -44,8 +44,29 @@ public class CategoriaDAOImplementar implements CategoriaDAO{
 
     @Override
     public List<Categoria> Listar2() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+          this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
+        StringBuilder MiSQL = new StringBuilder(); //Contruir la consulta
+        MiSQL.append("SELECT * FROM tb_categoria;"); // Agregar la consulta
+        List<Categoria> listars = new ArrayList<Categoria>();
+        try{
+            //Se crea el objeto ResultSet implementa el metodo(consultarSQL) creado para la consulta
+            ResultSet resultadoSQL = this.conn.consultaSQL(MiSQL.toString());
+        while(resultadoSQL.next()){
+            Categoria categoria = new Categoria(); //Declarar el objeto categoria
+            //Asignar cada campo consultado al atributo en la clase
+            categoria.setId_categoria(resultadoSQL.getInt("id_categoria"));
+            categoria.setNom_categoria(resultadoSQL.getString("nom_categoria"));
+            categoria.setEstado_categoria(resultadoSQL.getInt("estado_categoria"));
+            listars.add(categoria); //Asignar al array cada registro encontrado
+        }
+            
+        }catch(Exception ex){
+                
+        } finally{
+            this.conn.cerrarConexion(); //Para cerrar la conexion      
+        }
+                return listars;
+        }
 
     @Override
     public Categoria editarCat(int id_cat_edit) {
