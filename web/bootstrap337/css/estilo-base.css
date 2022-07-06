@@ -9,15 +9,31 @@
 
 .contenido{
     padding: 0px;
-    
 }
-.p{
-  font-family: monospace;  
+.btn{
+    background-color: slateblue;
+    color: white;
+}
+.btn2{
+    background-color: slategray;
+    color: white;
+}
+.btn3{
+    background-color: plum;
+    color: white;
+}
+.alert{
+   background-color: beige; 
+}
+.form-control{
+    margin: 0 10px 0 10px;
+  padding: 0 10px 0 10px;
 }
 
 .container{
-    box-shadow: 15px 15px 15px #e6e6fa,
-    15px 15px 10px #e6e6fa inset;
+    background-color: #ebccd1;
+    box-shadow: 10px 10px 5px salmon,
+    10px 10px 5px salmon inset;
 }
 
 .table{
@@ -29,12 +45,13 @@
     padding: 10px;
 }
 .pie{
-    background-color: #FF00FF;
-    color: #00FFFF;
+    background-color: #ebccd1;
+    color: #843534;
     height: 36px;
+    box-shadow: 15px 5px 10px 5px salmon;
     padding: 10px;
     text-align: center;
-    font-family: cursive;
+    font-family: arial;
     font-weight: bold;
 }
 

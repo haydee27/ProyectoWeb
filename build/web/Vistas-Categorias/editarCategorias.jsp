@@ -16,54 +16,59 @@
         <title>MODIFICAR CATEGORIAS</title>
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body class="m-0 row justify-content-center" background="img/morado.jpg">
+    <body background="img/morado.jpg">
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-         <div class="col-auto bg-gray p-5 text-center">
-        <h1 class='text-center'>Datos de Categoria</h1>
-        <form action="actualizarCategorias.do" method="post">
+         <hr>
+         <div class="container">
+             <%--<div class="col-auto bg-gray p-5 text-center"> --%>
+             <hr><h1 class="text-center">DATOS DE CATEGORIA</h1>
+        <hr><form action="actualizarCategorias.do" method="post">
         <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">ID Categoria:</label>
-            <div class="col-sm-10">
-              <input type="text" value='<%= id_cat %>' name="id1" id="id1" readonly class="form-control-plaintext" id="staticEmail" placeholder="ID Categoria">
-              <input type="hidden" value='<%= id_cat %>' name="id" id="id" readonly class="form-control-plaintext" id="staticEmail" >
+            <center><label for="staticEmail" class="col-sm-2 col-form-label">ID:</label>
+            </center> <div class="col-sm-10">
+                <center><input type="text" value='<%= id_cat %>' name="id1" id="id1" readonly class="form-control-plaintext" id="staticEmail" placeholder="ID Categoria">
+                </center> <input type="hidden" value='<%= id_cat %>' name="id" id="id" readonly class="form-control-plaintext" id="staticEmail" >
             </div>
         </div>
             
-        <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Nombre Categoria:</label>
+        <div >
+          <label for="inputPassword" class="col-sm-2 col-form-label">NOMBRE:</label>
           <div class="col-sm-10">
               <input type="text" value='<%= nombre_cat %>' name="nombre" id="nombre" class="form-control" placeholder="Nombre Categoria" required="true">
           </div>
         </div>
-          
-          <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Estado Categoria:</label>
+          <br>
+          <div>
+          <label for="inputPassword" class="col-sm-2 col-form-label">ESTADO:</label>
           <div class="col-sm-10">
-              <input type="text" value='<%= estado_cat %>' name="estado" id="estado" class="form-control" placeholder="Estado Categoria" required="true">
+              <input type="text" size="15" value='<%= estado_cat %>' name="estado" id="estado" class="form-control" placeholder="Estado Categoria" required="true">
           </div>
         </div>
-          
-          <div class="mb-3 row">
-          
-              <button type="submit" name="send" class="btn btn-success">Actualizar Categoria</button>
-               <a href="categorias.do?opcion=listar" class="btn btn-secondary btn-lg" role="button">Regresa</a>
+          <br>
+          <div>
+              <br>
+              <Center><button type="submit" name="send" class="btn btn-secondary ">ACTUALIZAR</button>
+              <a href="categorias.do?opcion=listar" class="btn btn-secondary " role="button">REGRESAR</a>
+               </center>
           </div>
-        </form>
-          
+          <hr>
+           </form>
+        
+           </div>
+          <br>
           <%
             String dato = request.getParameter("aviso");
             if(dato!=null){
                 //out.print("Registro Actualizado Correctamente");
                 //System.out.println("End");
            %>
-                   <div class="alert alert-success" role="alert">
-                   Registro Actualizado Correctamente!!
-                 </div>
+                   <div class="alert" role="alert">
+                   <center>Registro Actualizado Correctamente!!
+                   </center></div>
            <%   
                }
            %>
-
-        </div>
+           <hr>
          <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
     

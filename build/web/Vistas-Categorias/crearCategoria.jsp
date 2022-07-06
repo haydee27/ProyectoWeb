@@ -16,30 +16,38 @@
     <body background="img/morado.jpg">
         
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"  %>
-        
-        <h1>AGREGAR CATEGORIAS</h1>
-        <form class="form-horizontal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath() %>/categorias.do" method="post">
+        <hr><div class="container">
+            <hr><h1 class="text-center">AGREGAR CATEGORIAS</h1>
+            <hr> <form class="form-horizontal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath() %>/categorias.do" method="post">
             <input type="hidden" name="id_categoria" value="<%= categoria.getId_categoria() %>">
-            <div class="form-group">
+            <div >
                 <label for="txtNomCategoria" class="col-sm-2 control-label">NOMBRE:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="txtNomCategoria" >
                 </div>
             </div>
-            <div class="form-group">
+            <div >
                 <label for="txtEstadoCategoria" class="col-sm-2 control-label">ESTADO:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="txtEstadoCategoria">
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-sm-offset-10 col-sm-10">
-                    <input type="submit" class="btn btn-success btn-sm" name="btnGuardar" value="GUARDAR" />
-                    <input type="button" class="btn btn-danger btn-sm" onclick="regresar('<%= request.getContextPath() %>/categorias.do?opcion=listar')" name="btnRegresar" value="REGRESAR" />
+            <br>
+            <div>
+                
+                <div class="col-sm-10">
+                    <center><input type="submit" class="btn btn-secondary" name="btnGuardar" value="GUARDAR" />
+                    <input type="button" class="btn btn-secondary" onclick="regresar('<%= request.getContextPath() %>/categorias.do?opcion=listar')" name="btnRegresar" value="REGRESAR" />
+                    </center> 
+                  
                 </div>
             </div>
+                    <hr
         </form>
-        
+                <hr>
+                
+                </div>
+                    <hr>
         <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf"  %>
     </body>
 </html>

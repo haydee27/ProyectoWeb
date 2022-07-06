@@ -14,21 +14,21 @@
     </head>
     <body background="img/morado.jpg">
        <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"  %>
-            <div class="col-auto bg-grayp-5 txt-center">
-        <h1> Baja de categorias </h1>
-        
-        <h4>¿Realmente Desea Eliminar el Registro?</h4>
-        <h5>ID Categoria: <%=id_cat %></h5>
-        <h5>Nombre Categoria: <%=nombre_cat %></h5>
-            </div>
-            
-            
-            
+       <%--<div class="col-auto bg-grayp-5 txt-center"> --%>
+       <hr>
+       <div class="container">
+           <hr>
+                <h1 class="text-center"> ELIMINAR CATEGORIA </h1>
+                <hr>
+                <h2 class="text-center">¿Realmente Desea Eliminar el Registro?</h2>
+                <h4 class="text-center">ID Categoria: <%=id_cat %></h4>
+                <h4 class="text-center">Nombre Categoria: <%=nombre_cat %></h4>
+
             <div class="d-grid gap-5d-md-flex justify-content-md-center">
-                <a href="bajaCategorias.do?respuesta=yes&&id=<%= id_cat %>" class="btn btn-primary btn-lg" role="button">Si / Aceptar</a>
+                <center><a href="bajaCategorias.do?respuesta=yes&&id=<%= id_cat %>" class="btn  btn-lg" role="button">Si / Aceptar</a>
           
-                <a href="categorias.do?opcion=listar" class="btn btn-secondary btn-lg" role="button">NO / Cancelar</a>
-            </div> 
+                <a href="categorias.do?opcion=listar" class="btn btn-lg" role="button">NO / Cancelar</a>
+                </center> </div> 
                 
                 <div class="row justify-content-center">
                 <div class="col-4 bg-white">
@@ -38,9 +38,9 @@
                         &nbsp;
                     </div>
                 </div>  
-                
-                
-                
+                <hr>
+    </div>
+                <hr>    
                <%@include  file="../WEB-INF/Vistas-Parciales/pie.jspf"  %>
     </body>
 </html>
