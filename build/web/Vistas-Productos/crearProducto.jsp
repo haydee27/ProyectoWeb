@@ -17,52 +17,59 @@
     <body background="img/morado.jpg">
         
          <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
-        <h3>Agregar Registro de Producto</h3>
-        <form class="form-horizontal" id="frmProducto" name="frmProducto" action="<%= request.getContextPath() %>/productos.do" method="post">
+         <div class="container">
+         <hr><h1 class="text-center">AGREGAR PRODUCTO</h1>
+         <hr><form class="form-horizontal" id="frmProducto" name="frmProducto" action="<%= request.getContextPath() %>/productos.do" method="post">
             <input type="hidden" name="id_producto" value="<%= producto.getId_producto() %>">
             <div class="form-group">
-                <label for="txtNomProducto" class="col-sm-2 control-label">Nombre:</label>
+                <label for="txtNomProducto" class="col-sm-2 control-label">NOMBRE:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="txtNomProducto">
                 </div>
             </div>
                 <div class="form-group" >
-                    <label for="txtstock" class="col-sm-2 control-label">Stock</label>
+                    <label for="txtstock" class="col-sm-2 control-label">STOCK:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="txtstock"> 
                     </div>
                 </div>
                 <div class="form-group" >
-                    <label for="txtprecio" class="col-sm-2 control-label">Precio</label>
+                    <label for="txtprecio" class="col-sm-2 control-label">PRECIO:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="txtprecio" > 
                     </div>
                 </div>
                  <div class="form-group" >
-                    <label for="txtunidaMedida" class="col-sm-2 control-label">Unidad de medida</label>
+                    <label for="txtunidaMedida" class="col-sm-2 control-label">UNIDAD DE MEDIDA:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="txtunidaMedida" > 
                     </div>
                  </div>
                      <div class="form-group" >
-                    <label for="txtestado" class="col-sm-2 control-label">Estado</label>
+                    <label for="txtestado" class="col-sm-2 control-label">ESTADO:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="txtestado" > 
                     </div>
                      </div>
                      <div class="form-group" >
-                    <label for="txtcategoria" class="col-sm-2 control-label">Categoria</label>
+                    <label for="txtcategoria" class="col-sm-2 control-label">CATEGORIA:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="txtcategoria" > 
                     </div>
                 </div>
+            <hr>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                        <input type="submit" class="btn btn-success btn-sm" name="btnGuardar" value="GUARDA"/>
-                        <input type="button" class="btn btn-danger btn-sm" onclick="regresar('<%=request.getContextPath() %>/productos.do?opcion=listar')" name="btnRegresar" value="Regresar"/>
+                            <center> <input type="submit" class="btn btn-secondary " name="btnGuardar" value="GUARDA"/>
+                            <input type="button" class="btn btn-secondary " onclick="regresar('<%=request.getContextPath() %>/productos.do?opcion=listar')" name="btnRegresar" value="REGRESAR"/>
+                       </center> 
                         </div>
                     </div>
+                        <hr>
         </form>
+                        <hr>
+    </div>
+                        <hr>
                           <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
 </html>

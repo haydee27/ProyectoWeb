@@ -33,9 +33,9 @@
                 </div>
             </div>
             <br>
-            <div>
-                
-                <div class="col-sm-10">
+            <div class="form-group">
+                <hr>
+                     <div class="col-sm-offset-2 col-sm-10">
                     <center><input type="submit" class="btn btn-secondary" name="btnGuardar" value="GUARDAR" />
                     <input type="button" class="btn btn-secondary" onclick="regresar('<%= request.getContextPath() %>/categorias.do?opcion=listar')" name="btnRegresar" value="REGRESAR" />
                     </center> 

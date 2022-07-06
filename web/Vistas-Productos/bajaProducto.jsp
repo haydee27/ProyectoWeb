@@ -14,18 +14,21 @@
     </head>
     <body background="img/morado.jpg">
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"  %>
-        <div class="col-auto bg-grayp-5 txt-center">
-        <h1>¿DESEA ELIMINAR EL SIGUIENTE PRODUCTO?</h1>
-        <h3> ID: <%= id_producto %></h3>
-        <h3> NOMBRE: <%= nom_producto %></h3>
-        
-        </div>
+        <hr>
+        <div class="container">
+            <hr>
+             <h1 class="text-center"> ELIMINAR PRODUCTO  </h1>
+             <hr>
+       <%-- <div class="col-auto bg-grayp-5 txt-center"> --%>
+        <h2 class="text-center">¿DESEA ELIMINAR EL SIGUIENTE PRODUCTO?</h2>
+        <h4 class="text-center"> ID: <%= id_producto %></h4>
+        <h4 class="text-center"> NOMBRE: <%= nom_producto %></h4>
         
         <div class="d-grid gap-5d-md-flex justify-content-md-center">
-                <a href="bajaProducto.do?respuesta=yes&&id=<%= id_producto %>" class="btn btn-primary btn-lg" role="button">Si / Aceptar</a>
+            <center><a href="bajaProducto.do?respuesta=yes&&id=<%= id_producto %>" class="btn btn-lg" role="button">Si / Aceptar</a>
           
-                <a href="productos.do?opcion=listar" class="btn btn-secondary btn-lg" role="button">NO / Cancelar</a>
-            </div> 
+                <a href="productos.do?opcion=listar" class="btn btn-lg" role="button">NO / Cancelar</a>
+            </center></div> 
                 
                 <div class="row justify-content-center">
                 <div class="col-4 bg-white">
@@ -35,6 +38,9 @@
                         &nbsp;
                     </div>
                 </div>  
+            <hr>
+        </div>
+            <hr>
         <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf"  %>
     </body>
 </html>

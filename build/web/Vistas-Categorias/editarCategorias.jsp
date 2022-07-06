@@ -46,7 +46,7 @@
         </div>
           <br>
           <div>
-              <br>
+              <hr>
               <Center><button type="submit" name="send" class="btn btn-secondary ">ACTUALIZAR</button>
               <a href="categorias.do?opcion=listar" class="btn btn-secondary " role="button">REGRESAR</a>
                </center>

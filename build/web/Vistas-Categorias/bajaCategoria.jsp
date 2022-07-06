@@ -20,9 +20,9 @@
            <hr>
                 <h1 class="text-center"> ELIMINAR CATEGORIA </h1>
                 <hr>
-                <h2 class="text-center">¿Realmente Desea Eliminar el Registro?</h2>
-                <h4 class="text-center">ID Categoria: <%=id_cat %></h4>
-                <h4 class="text-center">Nombre Categoria: <%=nombre_cat %></h4>
+                <h2 class="text-center">¿DESEA ELIMINAR LA SIGUIENTE CATEGORIA?</h2>
+                <h4 class="text-center">ID: <%=id_cat %></h4>
+                <h4 class="text-center">NOMBRE: <%=nombre_cat %></h4>
 
             <div class="d-grid gap-5d-md-flex justify-content-md-center">
                 <center><a href="bajaCategorias.do?respuesta=yes&&id=<%= id_cat %>" class="btn  btn-lg" role="button">Si / Aceptar</a>

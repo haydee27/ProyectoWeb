@@ -16,67 +16,71 @@
         <title>MODIFICAR PRODUCTOS</title>
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body class="m-o row justify-content-center" background="img/morado.jpg">
+    <body background="img/morado.jpg">
       <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-      <div class="col-auto bg-gray p-5 text-center"> 
-      <h1 class= 'text-center'>Datos de Producto</h1>
-        <form action="actualizarProductos.do" method="post">
+      <hr>
+      <div class="container"> 
+          <hr><h1 class= "text-center">DATOS DE PRODUCTO</h1>
+      <hr><form action="actualizarProductos.do" method="post">
             
-            <div class="mb-3 row"> 
-                <label for="staticEmail" class="col-sm-2 col-form-label">ID Producto:</label>
-            <div class="col-sm-10">
-                <input type="text" value='<%= id_Pro%>' name="id" id="id" readonly class="form-control-plaintext" id="staticEmail" placeholder="Id_Pro">
-                <input type="hidden" value='<%= id_Pro %>' name="id" id="id" readonly class="form-control-plaintext"  
+          <div class="mb-3 row"> 
+              <center><label for="staticEmail" class="col-sm-2 col-form-label">ID:</label>
+              </center><div class="col-sm-10">
+                  <center> <input type="text" value='<%= id_Pro%>' name="id" id="id" readonly class="form-control-plaintext" id="staticEmail" placeholder="Id_Pro">
+                  </center> <input type="hidden" value='<%= id_Pro %>' name="id" id="id" readonly class="form-control-plaintext"  
+        </div>
         </div>
     </div>
         
             <div class="mb-3 row">
-                 <label for="inputPassword" class="col-sm-2 col-form-label">Nombre Producto:</label> 
+                 <label for="inputPassword" class="col-sm-2 col-form-label">NOMBRE:</label> 
                   <div class="col-sm-10">
                      <input type="text" value='<%= nom_Pro %>' name="nombre" id="nombre" class="form-control" placeholder="nombre" >
         </div>
     </div>
         
             <div class="mb-3 row">
-                 <label for="inputPassword" class="col-sm-2 col-form-label"> Stock: </label>
+                 <label for="inputPassword" class="col-sm-2 col-form-label"> STOCK: </label>
                  <div class="col-sm-10">
                     <input type="text" value='<%= stock %>' name="stock" id="stock" class="form-control" placeholder="stock" >
         </div>
     </div> 
         
             <div class="mb-3 row">
-                 <label for="inputPassword" class="col-sm-2 col-form-label"> Precio: </label>
+                 <label for="inputPassword" class="col-sm-2 col-form-label">PRECIO: </label>
                  <div class="col-sm-10">
                     <input type="text" value='<%= precio %>' name="precio" id="precio" class="form-control" placeholder="precio" >
         </div>
    </div>
         
             <div class="mb-3 row">
-                 <label for="inputPassword" class="col-sm-2 col-form-label"> Unidad de medida </label>
+                 <label for="inputPassword" class="col-sm-2 col-form-label"> UNIDAD DE MEDIDA:</label>
                  <div class="col-sm-10">
                      <input type="text" value='<%= unidad_de_medida %>' name="unidad_de_medida" id="unidad_de_medida" class="form-control" placeholder="unidad" >
         </div>
     </div>
            <div class="mb-3 row">
-                 <label for="inputPassword" class="col-sm-2 col-form-label">Estado Producto</label>
+                 <label for="inputPassword" class="col-sm-2 col-form-label">ESTADO:</label>
                  <div class="col-sm-10">
                      <input type="text" value='<%= estado_Pro %>' name="estado_producto" id="estado_producto" class="form-control" placeholder="estado" >
         </div>
     </div>
             <div class="mb-3 row">
-                   <label for="inputPassword" class="col-sm-2 col-form-label">Categoria</label>
+                   <label for="inputPassword" class="col-sm-2 col-form-label">CATEGORIA:</label>
                      <div class="col-sm-10">
                     <input type="text" value='<%= categoria %>' name="categoria" id="categoria" class="form-control" placeholder="categoria" >
         </div>
     </div>
         
             <div class="mb-3 row">
-          
-              <button type="submit" name="send" class="btn btn-success">Actualizar Producto</button>
-               <a href="productos.do?opcion=listar" class="btn btn-secondary btn-lg" role="button">Regresa</a>
-        </div>
+                <hr>
+                <center><button type="submit" name="send" class="btn btn-secondary">ACTUALIZAR</button>
+               <a href="productos.do?opcion=listar" class="btn btn-secondary " role="button">REGRESAR</a>
+                </center></div>
+        <hr>
         </form>
-  
+      </div>
+        <br>
         
            <%
             String dato = request.getParameter("aviso");
@@ -84,14 +88,14 @@
                 //out.print("Registro Actualizado Correctamente");
                 //System.out.println("End");
            %>
-                   <div class="alert alert-success" role="alert">
-                   Registro Actualizado Correctamente!!
+                   <div class="alert" role="alert">
+                       <center> Registro Actualizado Correctamente!!</center>
                  </div>
            <%   
                }
            %>
            
-    </div>
+           <hr>
          <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
                         
     </body>
