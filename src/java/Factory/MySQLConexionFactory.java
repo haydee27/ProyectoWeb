@@ -8,7 +8,8 @@ public final class MySQLConexionFactory extends ConexionBD {
 
      public MySQLConexionFactory(String[] criterios) {
         this.parametros = criterios; //Pasar los criterios al array de la clase padre, parametros
-        this.open(); //Llamar al metodo open();
+        this.open(); //Llamar al metodo open(); 
+        
     }
      
      @Override
