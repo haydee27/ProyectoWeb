@@ -40,14 +40,14 @@
                          <a style="margin-left: 10px;" href="productos.do?opcion=listar" class="btn" style="background-color: #967ADC;" role="button" >PRODUCTOS</a>
                          
                      </li>
-                    <%-- li class="nav-item">
-                         <a style="margin-left: 10px;" href="categorias.do?opcion=listars" class="btn" style="background-color: #967ADC;" role="button" >REGISTROS</a>
-                         
-                     </li> --%>
                     
                     
                      <li class="nav-item">
                          <a style="margin-left: 10px;" href="productos.do?opcion=listarss" class="btn" style="background-color: #967ADC;" role="button" >REGISTROS</a>
+                         
+                     </li>
+                      <li class="nav-item">
+                         <a style="margin-left: 10px;" href="Reportes.do" class="btn" style="background-color: #967ADC;" role="button" >REPORTES</a>
                          
                      </li>
               </ul>
