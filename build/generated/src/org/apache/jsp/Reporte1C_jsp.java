@@ -75,7 +75,7 @@ public final class Reporte1C_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("    </head>\n");
       out.write("    <body background=\"img/morado.jpg\" >\n");
-      out.write("        ");
+      out.write("         ");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -118,17 +118,14 @@ public final class Reporte1C_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                         <a style=\"margin-left: 10px;\" href=\"productos.do?opcion=listar\" class=\"btn\" style=\"background-color: #967ADC;\" role=\"button\" >PRODUCTOS</a>\r\n");
       out.write("                         \r\n");
       out.write("                     </li>\r\n");
-      out.write("                    ");
-      out.write("\r\n");
       out.write("                    \r\n");
       out.write("                    \r\n");
       out.write("                     <li class=\"nav-item\">\r\n");
       out.write("                         <a style=\"margin-left: 10px;\" href=\"productos.do?opcion=listarss\" class=\"btn\" style=\"background-color: #967ADC;\" role=\"button\" >REGISTROS</a>\r\n");
       out.write("                         \r\n");
       out.write("                     </li>\r\n");
-      out.write("                     <a href=\"../../Reporte1C.jsp\"></a>\r\n");
       out.write("                      <li class=\"nav-item\">\r\n");
-      out.write("                         <a style=\"margin-left: 10px;\" href=\"Reportes.do\" class=\"btn\" style=\"background-color: #967ADC;\" role=\"button\" >REGISTROS</a>\r\n");
+      out.write("                         <a style=\"margin-left: 10px;\" href=\"Reportes.do\" class=\"btn\" style=\"background-color: #967ADC;\" role=\"button\" >REPORTES</a>\r\n");
       out.write("                         \r\n");
       out.write("                     </li>\r\n");
       out.write("              </ul>\r\n");
@@ -137,7 +134,7 @@ public final class Reporte1C_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </nav>\r\n");
       out.write("\n");
       out.write("        <hr>\n");
-      out.write("        <h3> REPORTES </h3>\n");
+      out.write("        <h3 class=\"text-centert\"> REPORTES </h3>\n");
       out.write("        <hr>\n");
       out.write("        <div class=\"container\">\n");
       out.write("            <hr>\n");
