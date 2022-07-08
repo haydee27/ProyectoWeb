@@ -35,9 +35,14 @@
             </tr>
         </table>
         <hr>
+<<<<<<< Updated upstream
         <%--cambios de pruebas --%>
         <center> <a  href="categorias.do?opcion=listars" class="btn btn-sm " role="button" >REGISTROS</a></center>
         <hr>
+=======
+        <Center><a href="productos.do?opcion=listarss" class="btn" role="button">REGISTROS GUARDADOS</a>
+        </center><HR>
+>>>>>>> Stashed changes
         </div>
       
         <hr><%@include file="WEB-INF/Vistas-Parciales/pie.jspf"  %>

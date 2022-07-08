@@ -48,7 +48,11 @@ public class ProductoDAOImplementar implements ProductoDAO{
 
     @Override
     public List<Producto> Listar2() {
+<<<<<<< Updated upstream
     this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
+=======
+        this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
+>>>>>>> Stashed changes
     StringBuilder miSQL = new StringBuilder();
     miSQL.append("SELECT * FROM tb_producto;");
     List<Producto> listarss = new ArrayList<Producto>();
@@ -73,7 +77,11 @@ public class ProductoDAOImplementar implements ProductoDAO{
     }finally{
         this.conn.cerrarConexion();
     }
+<<<<<<< Updated upstream
       return listarss;   
+=======
+      return listarss;
+>>>>>>> Stashed changes
     }
 
     @Override

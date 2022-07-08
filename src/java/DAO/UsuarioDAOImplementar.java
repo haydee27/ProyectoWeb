@@ -21,21 +21,21 @@ public class UsuarioDAOImplementar implements UsuarioDAO {
     }
 
     @Override
-    public ArrayList<Usuario> starSesion(String user, String clave) {
+    public ArrayList<Usuario> startSesion(String user, String clave) {
         this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
         StringBuilder miSQL = new StringBuilder();
-        miSQL.append("SELECT * fROM tb_usuario WHERE BINARY correo = '").append(user);
+        miSQL.append("SELECT * FROM tb_usuario WHERE BINARY correo = '").append(user);
         miSQL.append("' and clave = md5('").append(clave);
-        miSQL.append("');");
+        miSQL.append("');");  
         System.out.println(miSQL);
-        
+        //ArrayList<Usuario> user = new ArrayList(); // crear el array de almacenamiento en cada fial los registros encontrados
         ArrayList<Usuario> lista = new ArrayList<Usuario>();
         try{
-            //Se crea el objeto ResultSet implementando el metodo (consultaSQL) creado para la consulta
+        //Se crea el objeto ResultSet implementando el método (consultaSQL) creado para la consulta.
             ResultSet resultadoSQL = this.conn.consultaSQL(miSQL.toString());
             while(resultadoSQL.next()){
                 Usuario usuario = new Usuario();
-                //Asignar cada campo consultado al atributo en la clase 
+                //Asignar cada campo consultado al atributo en la clase.
                 usuario.setId(resultadoSQL.getInt("id"));
                 usuario.setNombre(resultadoSQL.getString("nombre"));
                 usuario.setApellido(resultadoSQL.getString("apellido"));
@@ -64,7 +64,7 @@ public class UsuarioDAOImplementar implements UsuarioDAO {
         //UsuarioDAO p = new UsuarioD
         UsuarioDAO p = new UsuarioDAOImplementar();
         ArrayList<Usuario> user = new ArrayList();
-        user = p.starSesion("haydeebonillareyes@gmail.com", "Hb27MA09");
+        user = p.startSesion("haydeebonillareyes@gmail.com", "Hb27MA09");
         //Para obtener el tamaño de un Array esta dado en base a la cantidad
         //de filas o registros existentes en la BD
         int size = user.size();

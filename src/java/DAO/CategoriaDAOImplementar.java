@@ -44,10 +44,17 @@ public class CategoriaDAOImplementar implements CategoriaDAO{
 
     @Override
     public List<Categoria> Listar2() {
+<<<<<<< Updated upstream
           this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
         StringBuilder MiSQL = new StringBuilder(); //Contruir la consulta
         MiSQL.append("SELECT * FROM tb_categoria;"); // Agregar la consulta
         List<Categoria> listars = new ArrayList<Categoria>();
+=======
+   this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
+        StringBuilder MiSQL = new StringBuilder(); //Contruir la consulta
+        MiSQL.append("SELECT * FROM tb_categoria;"); // Agregar la consulta
+        List<Categoria> listar = new ArrayList<Categoria>();
+>>>>>>> Stashed changes
         try{
             //Se crea el objeto ResultSet implementa el metodo(consultarSQL) creado para la consulta
             ResultSet resultadoSQL = this.conn.consultaSQL(MiSQL.toString());
@@ -57,7 +64,11 @@ public class CategoriaDAOImplementar implements CategoriaDAO{
             categoria.setId_categoria(resultadoSQL.getInt("id_categoria"));
             categoria.setNom_categoria(resultadoSQL.getString("nom_categoria"));
             categoria.setEstado_categoria(resultadoSQL.getInt("estado_categoria"));
+<<<<<<< Updated upstream
             listars.add(categoria); //Asignar al array cada registro encontrado
+=======
+            listar.add(categoria); //Asignar al array cada registro encontrado
+>>>>>>> Stashed changes
         }
             
         }catch(Exception ex){
@@ -65,8 +76,12 @@ public class CategoriaDAOImplementar implements CategoriaDAO{
         } finally{
             this.conn.cerrarConexion(); //Para cerrar la conexion      
         }
+<<<<<<< Updated upstream
                 return listars;
         }
+=======
+                return listar; }
+>>>>>>> Stashed changes
 
     @Override
     public Categoria editarCat(int id_cat_edit) {

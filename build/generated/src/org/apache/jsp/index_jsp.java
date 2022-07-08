@@ -88,6 +88,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <a href=\"index\" class=\"btn btn-primary btn-sm\" role=\"button\">INICIO</a>\r\n");
       out.write("        <a href=\"categorias.do?opcion=listar\" class=\"btn btn-primary btn-sm\" role=\"button\">CATEGORIAS</a>\r\n");
       out.write("        <a href=\"productos.do?opcion=listar\" class=\"btn btn-primary btn-sm\" role=\"button\">PRODUCTO</a>\r\n");
+<<<<<<< Updated upstream
       out.write("        </div>-->\r\n");
       out.write("    <!--<div class=\"contenido\"> -->\r\n");
       out.write("    \r\n");
@@ -160,6 +161,42 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <hr>\r\n");
       out.write("        </div>\r\n");
       out.write("      \r\n");
+=======
+      out.write("        <a href=\"categorias.do?opcion=listars\" class=\"btn btn-primary btn-sm\" role=\"button\">REGISTROS</a> \r\n");
+      out.write("        \r\n");
+      out.write("    </div>\r\n");
+      out.write("    <div class=\"contenido\"> \r\n");
+      out.write("        <!-- Este DIV no se cierra aqui, se cierra en pie.jspf -->\r\n");
+      out.write("\n");
+      out.write("        <hr>\n");
+      out.write("        <div class=\"container\">\n");
+      out.write("            <HR>\n");
+      out.write("            <center> <h1>BIENVENIDOS/AS!</h1> </center>\n");
+      out.write("            <hr>\n");
+      out.write("            <img class= \"mb-4\" src=\"img/logo.png\" align=\"left\" width=\"65\" height=\"57\"/><h1 class=\"text-center\">CORPORACION BANTANG S.A de CV </h1>\n");
+      out.write("        <p class=\"text-center\"> INFORMACION GENERAL </h4>\n");
+      out.write("        <table class=\"table table-bordered\" width=\"20px\" >\n");
+      out.write("            <tr>\n");
+      out.write("            <td class=\"text-center\">Nombre: </td>\n");
+      out.write("            <td class=\"text-center\">Dirección: </td>\n");
+      out.write("            <td class=\"text-center\">Telefono: </td>\n");
+      out.write("            <td class=\"text-center\">CEO: </td>\n");
+      out.write("            <td class=\"text-center\">E-mail: </td>\n");
+      out.write("            </tr>\n");
+      out.write("            <tr>\n");
+      out.write("            <td class=\"text-center\">Bantang S.A de C.V</td>\n");
+      out.write("            <td class=\"text-center\">San Salvador, carretera al Litoral </td>\n");
+      out.write("            <td class=\"text-center\">2775-0000</td>\n");
+      out.write("            <td class=\"text-center\">Bang PD</td>\n");
+      out.write("            <td class=\"text-center\">bantang2013@gmail.com </td>\n");
+      out.write("            </tr>\n");
+      out.write("        </table>\n");
+      out.write("        <hr>\n");
+      out.write("        <Center><a href=\"productos.do?opcion=listarss\" class=\"btn\" role=\"button\">REGISTROS GUARDADOS</a>\n");
+      out.write("        </center><HR>\n");
+      out.write("        </div>\n");
+      out.write("      \n");
+>>>>>>> Stashed changes
       out.write("        <hr>");
       out.write("\r\n");
       out.write("\r\n");

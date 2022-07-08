@@ -44,14 +44,23 @@ public class Categorias extends HttpServlet {
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/listarCategorias.jsp");
         dispatcher.forward(request, response);
     }
+<<<<<<< Updated upstream
      protected void listaCategorias1(HttpServletRequest request, HttpServletResponse response)
+=======
+     protected void listaCategorias2(HttpServletRequest request, HttpServletResponse response)
+>>>>>>> Stashed changes
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         CategoriaDAO categoria = new CategoriaDAOImplementar();
         
         HttpSession sesion = request.getSession(true);
+<<<<<<< Updated upstream
         sesion.setAttribute("listars", categoria.Listar2());
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/listadoPro_Cat.jsp");
+=======
+        sesion.setAttribute("listars", categoria.Listar());
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/listasPro_Cat.jsp");
+>>>>>>> Stashed changes
         dispatcher.forward(request, response);
     }
     @Override
@@ -64,9 +73,14 @@ public class Categorias extends HttpServlet {
          String id_cat = request.getParameter("id");
          String nombre_cat = request.getParameter("nombre");
          String estado_cat = request.getParameter("estado");
+<<<<<<< Updated upstream
         
          if(parametro.equals("listars")){
              this.listaCategorias1(request, response);
+=======
+         if(estado.equals("listars")){
+             this.listaCategorias2(request, response);
+>>>>>>> Stashed changes
          }else if(estado.equals("listar")){
             this.listaCategorias(request, response);
         }else if(parametro.equals("crear")){ //Evaluar si el parametro es crear o listar o cualquier otro

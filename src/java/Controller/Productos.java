@@ -47,8 +47,13 @@ public class Productos extends HttpServlet {
         String unidad = request.getParameter("unidad");
         String estado_pro = request.getParameter("estado");
         String Categoria = request.getParameter("categoria");
+<<<<<<< Updated upstream
         
         if(estado.equals("listarss")){
+=======
+       
+        if(parametro.equals("listarss")){
+>>>>>>> Stashed changes
             this.listaProductos1(request, response);
         }else if(parametro.equals("listar")){
             this.listaProductos(request, response);
@@ -100,18 +105,30 @@ public class Productos extends HttpServlet {
         dispatcher.forward(request, response);
         
     }
+<<<<<<< Updated upstream
    
     protected void listaProductos1(HttpServletRequest request, HttpServletResponse response)
+=======
+   protected void listaProductos1(HttpServletRequest request, HttpServletResponse response)
+>>>>>>> Stashed changes
            throws ServletException, IOException {
         response.setContentType("text/html;charset-UTF-8");
         ProductoDAO producto = new ProductoDAOImplementar();
         HttpSession session = request.getSession(true);
+<<<<<<< Updated upstream
         session.setAttribute("listarss", producto.Listar2());
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/listadoPro_Cat.jsp");
         dispatcher.forward(request, response);
         
     }
    
+=======
+        session.setAttribute("listarss", producto.Listar());
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/listasPro_Cat.jsp");
+        dispatcher.forward(request, response);
+        
+    }
+>>>>>>> Stashed changes
     @Override
     public String getServletInfo() {
         return "Short description";
