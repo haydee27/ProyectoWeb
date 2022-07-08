@@ -1,0 +1,60 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<div>
+    
+   <!--<div class="encabezado">
+        SISTEMA DE CONTROL DE INVENTARIO
+        <a href="index" class="btn btn-primary btn-sm" role="button">INICIO</a>
+        <a href="categorias.do?opcion=listar" class="btn btn-primary btn-sm" role="button">CATEGORIAS</a>
+        <a href="productos.do?opcion=listar" class="btn btn-primary btn-sm" role="button">PRODUCTO</a>
+        </div>-->
+    <!--<div class="contenido"> -->
+    
+    <!--<nav class="navbar bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+              <strong>&nbsp;SISTEMA DE CONTROL DE NVENTARIO</strong> 
+              <a href="Index" class="btn btn-primary">Inicio</a>
+              <a href="categorias?opcion=listar" class="btn btn-success">Catogias</a>
+              <a href="productos?opcion=listar" class="btn btn-success">Productos</a>
+          </a>
+        </div>
+    </nav>-->
+    </div>
+
+          <nav class="navbar navbar-expand-lg navbar-dark bg-danger"
+                 <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav">
+                      <li class="nav-item active">
+                          <a class="nav-link active" ><h3>SISTEMA DE CONTROL DE INVENTARIO</h3><span class="sr-only">(current)</span></a>
+                 </li>
+                    <li class="nav-item">
+                        <a style="margin-left: 10px;" href="index" class="btn" style="background-color: #967ADC;" role="button">INICIO</a>
+                </li>
+                     <li class="nav-item">
+                         <a style="margin-left: 10px;" href="categorias.do?opcion=listar" class="btn" style="background-color: #967ADC;" role="button">CATEGORIAS</a>
+                         
+                 </li>
+                     <li class="nav-item">
+                         <a style="margin-left: 10px;" href="productos.do?opcion=listar" class="btn" style="background-color: #967ADC;" role="button" >PRODUCTOS</a>
+                         
+                     </li>
+                    
+                    
+                     <li class="nav-item">
+                         <a style="margin-left: 10px;" href="productos.do?opcion=listarss" class="btn" style="background-color: #967ADC;" role="button" >REGISTROS</a>
+                         
+                     </li>
+                      <li class="nav-item">
+                         <a style="margin-left: 10px;" href="Reportes.do" class="btn" style="background-color: #967ADC;" role="button" >REPORTES</a>
+                         
+                     </li>
+                     <li class="nav-item">
+                         <a style="margin-left: 10px;" href="indexx.jsp" class="btn" style="background-color: #967ADC;" role="button" >SALIR</a>
+                         
+                     </li>
+              </ul>
+             </div>
+        </div>
+    </nav>
