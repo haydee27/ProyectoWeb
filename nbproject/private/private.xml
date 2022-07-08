@@ -3,11 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/src/java/Controller/Salir.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/src/java/Controller/LoginController.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/web/Vistas-Categorias/bajaCategoria.jsp</file>
+            <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/src/java/DAO/ProductoDAOImplementar.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/src/java/Controller/actualizarProductos.java</file>
             <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/web/Reporte1C.jsp</file>
             <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/src/java/Controller/Categorias.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/web/indexx.jsp</file>
             <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/web/index.jsp</file>
             <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/web/WEB-INF/Vistas-Parciales/encabezado.jspf</file>
+            <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/src/java/DAO/LoginDAO.java</file>
             <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/web/WEB-INF/Vistas-Parciales/pie.jspf</file>
+            <file>file:/C:/Users/MINEDUCYT/Documents/NetBeansProjects/ProyectoWeb/web/Reporte/report1.jrxml</file>
         </group>
     </open-files>
 </project-private>
