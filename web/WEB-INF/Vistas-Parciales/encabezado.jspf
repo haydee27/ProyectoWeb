@@ -121,6 +121,10 @@
                          <a style="margin-left: 10px;" href="Reportes.do" class="btn" style="background-color: #967ADC;" role="button" >REPORTES</a>
                          
                      </li>
+                      <li class="nav-item">
+                         <a style="margin-left: 10px;" href="indexx.jsp" class="btn" style="background-color: #967ADC;" role="button" >SALIR</a>
+                         
+                     </li>
               </ul>
              </div>
         </div>
