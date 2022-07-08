@@ -35,6 +35,7 @@
             </tr>
         </table>
         <hr>
+        <%--cambios de pruebas --%>
         <center> <a  href="categorias.do?opcion=listars" class="btn btn-sm " role="button" >REGISTROS</a></center>
         <hr>
         </div>
